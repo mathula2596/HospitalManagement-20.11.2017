@@ -1,0 +1,121 @@
+circle-container1 {
+  position: relative;
+  width: 150em;
+  height: 150em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+  margin: 15em auto 0;
+  border: solid 5px #51b8f1;
+}
+.circle-container1 > * {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: -3em;
+  width: 5.5em;
+  height: 5.5em;
+}
+
+.circle-container1 > *:nth-of-type(1) {
+  -webkit-transform: rotate(0deg) translate(25em) rotate(0deg);
+          transform: rotate(0deg) translate(25em) rotate(0deg);
+}
+.circle-container1 > *:nth-of-type(2) {
+  -webkit-transform: rotate(20deg) translate(25em) rotate(-20deg);
+          transform: rotate(20deg) translate(25em) rotate(-20deg);
+}
+.circle-container1 > *:nth-of-type(3) {
+  -webkit-transform: rotate(40deg) translate(25em) rotate(-40deg);
+          transform: rotate(40deg) translate(25em) rotate(-40deg);
+}
+.circle-container1 > *:nth-of-type(4) {
+  -webkit-transform: rotate(60deg) translate(25em) rotate(-60deg);
+          transform: rotate(60deg) translate(25em) rotate(-60deg);
+}
+.circle-container1 > *:nth-of-type(5) {
+  -webkit-transform: rotate(80deg) translate(25em) rotate(-80deg);
+          transform: rotate(80deg) translate(25em) rotate(-80deg);
+}
+.circle-container1 > *:nth-of-type(6) {
+  -webkit-transform: rotate(100deg) translate(25em) rotate(-100deg);
+          transform: rotate(100deg) translate(25em) rotate(-100deg);
+}
+.circle-container1 > *:nth-of-type(7) {
+  -webkit-transform: rotate(120deg) translate(25em) rotate(-120deg);
+          transform: rotate(120deg) translate(25em) rotate(-120deg);
+}
+.circle-container1 > *:nth-of-type(8) {
+  -webkit-transform: rotate(140deg) translate(25em) rotate(-140deg);
+          transform: rotate(140deg) translate(25em) rotate(-140deg);
+}
+.circle-container1 > *:nth-of-type(9) {
+  -webkit-transform: rotate(160deg) translate(25em) rotate(-160deg);
+          transform: rotate(160deg) translate(25em) rotate(-160deg);
+}
+.circle-container1 > *:nth-of-type(10) {
+  -webkit-transform: rotate(180deg) translate(25em) rotate(-180deg);
+          transform: rotate(180deg) translate(25em) rotate(-180deg);
+}
+
+.circle-container1 > *:nth-of-type(11) {
+  -webkit-transform: rotate(200deg) translate(25em) rotate(-200deg);
+          transform: rotate(200deg) translate(25em) rotate(-200deg);
+}
+
+.circle-container1 > *:nth-of-type(12) {
+  -webkit-transform: rotate(220deg) translate(25em) rotate(-220deg);
+          transform: rotate(220deg) translate(25em) rotate(-220deg);
+}
+
+.circle-container1 > *:nth-of-type(13) {
+  -webkit-transform: rotate(240deg) translate(25em) rotate(-240deg);
+          transform: rotate(240deg) translate(25em) rotate(-240deg);
+}
+
+.circle-container1 > *:nth-of-type(14) {
+  -webkit-transform: rotate(260deg) translate(25em) rotate(-260deg);
+          transform: rotate(260deg) translate(25em) rotate(-260deg);
+}
+
+.circle-container1 > *:nth-of-type(15) {
+  -webkit-transform: rotate(280deg) translate(25em) rotate(-280deg);
+          transform: rotate(280deg) translate(25em) rotate(-280deg);
+}
+
+.circle-container1 > *:nth-of-type(16) {
+  -webkit-transform: rotate(300deg) translate(25em) rotate(-300deg);
+          transform: rotate(300deg) translate(25em) rotate(-300deg);
+}
+.circle-container1 > *:nth-of-type(17) {
+  -webkit-transform: rotate(320deg) translate(25em) rotate(-320deg);
+          transform: rotate(320deg) translate(25em) rotate(-320deg);
+}
+.circle-container1 > *:nth-of-type(18) {
+  -webkit-transform: rotate(340deg) translate(25em) rotate(-340deg);
+          transform: rotate(340deg) translate(25em) rotate(-340deg);
+}
+.circle-container1 > *:nth-of-type(19) {
+  -webkit-transform: rotate(360deg) translate(25em) rotate(-360deg);
+          transform: rotate(360deg) translate(25em) rotate(-360deg);
+}
+
+
+.circle-container1 img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+	-webkit-filter: grayscale(0);
+          filter: grayscale(0);
+background-color: #e7e7e7;
+  border: solid 5px #51b8f1;
+  -webkit-transition: .15s;
+  transition: .15s;
+	caption-side: bottom;
+}
+.circle-container1 img:hover {
+	
+    -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}

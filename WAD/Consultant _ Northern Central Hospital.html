@@ -1,0 +1,1681 @@
+
+<html  >
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<SCRIPT LANGUAGE="JavaScript">
+
+function Minimize()
+{
+window.innerWidth = 500;
+window.innerHeight = 100;
+window.screenX = screen.width;
+window.screenY = screen.height;
+alwaysLowered = true;
+}
+
+function Maximize()
+{
+window.innerWidth = screen.width;
+window.innerHeight = screen.height;
+window.screenX = 0;
+window.screenY = 0;
+alwaysLowered = false;
+}
+</SCRIPT>
+	<style>
+
+/* define a fixed width for the entire menu */
+.navigation {
+  width: 265px;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+  display: block;
+  background-color: #51b8f1;
+  text-decoration: none;
+  padding: 10px;
+  color: #000;
+	color: #ffffff;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #000000;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover  .submenu {
+  display: block;
+  max-height: 300px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #f9f9f9;
+	color: #000000;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #000000;
+	color: #ffffff;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+	</style>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<link type="text/css" rel="stylesheet" href="css/patient.css" />
+<link type="text/css" rel="stylesheet" href="css/style3.css" />
+
+<!-- date and time -->
+<script type="text/javascript">
+    <!--
+    function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        if (minutes < 10){
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10){
+            seconds = "0" + seconds;
+        }
+        var v = hours + ":" + minutes + ":" + seconds + " ";
+        if(hours > 11){
+            v+="PM";
+        } else {
+            v+="AM"
+        }
+        setTimeout("updateTime()",1000);
+        document.getElementById('time').innerHTML=v;
+    }
+    updateTime();
+    //-->
+</script>
+
+
+<!-- date and time end  -->
+
+<!-- menu -->
+<style>
+ul#c {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color:#51b8f1;
+}
+
+li#c {
+    float: left;
+}
+
+#c li a {
+    display: block;
+    color:#FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  #c li a:hover:not(.active) {
+    background-color:#000000;
+}
+
+#c li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+</style>
+<!-- menu end-->
+
+
+
+
+
+<title>Health Care Hospital System</title>
+
+
+</head>
+
+
+<body  alink="#51b8f1" vlink="#A0A0A4">
+
+<!--logo file-->
+<div class="header">
+<img src="Images/looo.png">
+
+<div class="summary"> <label style="text-align: right">     User Login     : </label>  <?php echo $login_session; ?> <p align="right" style="position: absolute; top: -12px;left: 1298px;"> <font style="font-size:18px;"><a href="JavaScript:window.close()">Close </a> </font>
+ </td></tr></table>
+</div>
+<!--logo file end-->
+
+<!--date and time display-->
+<div class="date">
+<b>
+<script>
+<!-- Begin
+var now = new Date();
+var days = new Array('Sun','Mon','Tue','Wed','Thurs','Fri','Satur');
+var months = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+function fourdigits(number) {
+    return (number < 1000) ? number + 1900 : number;
+}
+today =  days[now.getDay()] + " " +
+         months[now.getMonth()] + " " +
+         date + " " +
+         (fourdigits(now.getYear())) ;
+document.write(today);
+//  End -->
+</script>
+
+<!--date  display end -->
+
+<!-- time display start-->
+<br>
+<span id="time"  />
+<br>
+<br>
+</b>
+
+</div>
+</div>
+<!--date and time display end-->
+<br>
+<br>
+
+<!--menu bar-->
+<div class="menu_group">
+<br>
+<div class="menu_items">
+<ul id="c">
+  <li id="c"> <font style="font-size:16px;"><a href="home.php">Home</a></li>
+
+
+  <li id="c"><a href="Consultant _ Northern Central Hospital.html">Active Members</a></li></font>
+
+</ul>
+</div>
+
+<!--menu end-->
+
+
+<!--marquee start -->
+<div class="menu">
+<marquee align="middle" direction="left" behavior="scroll" > <font size="+3"  color="#989898" face="Geneva, Arial, Helvetica, sans-serif"> <b> Always Care For You...... </b></font></marquee>
+</div>
+
+<!--marquee end -->
+<br />
+
+<br><br>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- saved from url=(0039)http://www.nchjaffna.com/consultant.php -->
+
+    
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<!--theme colour-->
+	<link rel="stylesheet" id="color" href="Consultant _ Northern Central Hospital_files/blue.css">
+
+    <!-- Bootstrap -->
+    <link href="Consultant _ Northern Central Hospital_files/bootstrap.css" rel="stylesheet">
+
+    <!-- medicom style -->
+    <link href="Consultant _ Northern Central Hospital_files/medicom.css" rel="stylesheet">
+    
+    <!--Madonary CSS-->
+    <link rel="stylesheet" href="Consultant _ Northern Central Hospital_files/reset.css">
+	<link rel="stylesheet" type="text/css" href="Consultant _ Northern Central Hospital_files/prettyPhoto.css">
+
+<style type="text/css">
+.border_article
+{
+	border:1px solid #e1e1e1 !important;
+	height:200px !important;
+	padding:20px;
+	width:265px !important;
+	float:left;
+	margin-right:10px;
+	margin-bottom:15px;
+	background-color:#F7F7F7;
+}
+</style>
+  <link rel="stylesheet" type="text/css" href="Consultant _ Northern Central Hospital_files/buttons.e80452d5e7cc382dad89d10f50bde247.css"><iframe id="stSegmentFrame" name="stSegmentFrame" frameborder="0" scrolling="no" width="0px" height="0px" sandbox="allow-scripts allow-same-origin" style="display:none;" src="Consultant _ Northern Central Hospital_files/saved_resource.html"></iframe></head>
+  <body class="fixed-header small-header">
+	
+    
+
+   
+    
+    
+       
+    
+    <section class="sub-page-banner text-center" > </section>
+    
+
+<div class="container">
+<section class="main">
+      <div class="portfolio four-column isotope" style="margin-top: -30px; position: relative; overflow: hidden; height: 3225px;">
+        
+<article class="CardiothoracicSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Ravi Perumalpillai</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MB, FRCS</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIAC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="CardiothoracicSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 0px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.M.S.Mugunthan MBBS(Jaffna)</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center"> MD SURGERY (COLOMBO), MRCS </td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOTHORACIC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="CardiothoracicSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 0px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+ Dr. Y. K. Lahie</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOTHORACIC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Cardiologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 0px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.M. Guruparan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 13065 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Cardiologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 215px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.P. Lakshman</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 12688 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Cardiologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 215px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr I. R Ragunathan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Cardiologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 215px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Sandamali Premaratne</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 20542 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Cardiologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 215px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Charith De Silva</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CARDIOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="DentalSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 430px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.P. Sathyakumar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+DENTAL SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Dentist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 430px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Lalithamani</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT DENTIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Dentist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 430px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Hamlet</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT DENTIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Dermatologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 430px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Felicia</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT DERMATOLOGIST </td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 15774 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Dermatologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 645px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Mrs.S. Sathyareka</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD (DERMATOLOGY)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT DERMATOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 14459 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Ent-Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 645px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.N. Indranath</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD(OTO)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT ENT SURGEO</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 19538 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Ent-Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 645px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.B. Thirumaran</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT ENT,HEAD </td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 13923 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="EyeSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 645px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.M.  Malaravan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD OPHTHALMOLOGY</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT  OPHTHALMOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Gastologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 860px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Nilesh Fernandopulle</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(COL), MD(COL)</td>
+</tr>
+
+<tr>
+<td align="center">
+GASTROENTEROLOGIST &amp;HEPATOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 21114 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Gyn&amp;Obs border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 860px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.K. Muhunthan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+.</td>
+</tr>
+
+<tr>
+<td align="center">
+GYN  &amp; OBS</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: . 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Gyn&amp;Obs border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 860px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Sathananthan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+GYN OBS</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Haematologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 860px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Mrs.T. Suriyakumar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS DIP.IN PATHOLOGY,MD(HEMATOLOGY)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT  HEMATOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 14645 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Neurologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1075px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.K. Ajantha</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD(COL), MRCP(LONDON)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT NEUROLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 19373 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="NeuroSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 1075px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Sanjeewa </h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL),MS(COL),MRCS(ENG)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT NEURO SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Nutritionist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 1075px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Miss.R. Vasini</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+Nutritionist</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Oncologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 1075px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.I. Kavitha</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT CLINICAL ONCOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 19537 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Orthopaedic border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1290px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.T. Gobyshanger</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT ORTHOPAEDIC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18184 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Orthopaedic border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 1290px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.P. Srigrishna</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT ORTHOPAEDIC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18531 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 1290px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.K. Arulmoli</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,DCH,MD(PAED)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 14069 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 1290px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.R. Maruthainar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL),DCH(COL)MD(COL)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 8811 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1505px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Mrs. Umashankar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,DCH,MD(PEAD) </td>
+</tr>
+
+<tr>
+<td align="center"> CONSULTAN PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18178  
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 1505px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. S. Jeyabalan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,DCH,MD</td>
+</tr>
+
+<tr>
+<td align="center"> CONSULTAN PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18058 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 1505px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.K.Kumuthiny</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,DCH,MD(PAED)</td>
+</tr>
+
+<tr>
+<td align="center"> CONSULTAN PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 1505px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Ghetheeswaran</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 14978 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1720px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.T. Kumanan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD,FRCP(EDIN)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN </td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 17265 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 1720px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S.  Mahathevan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS </td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN(VP)</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 15446 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 1720px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Nalayini Jegathesan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS, MD </td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18507 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 1720px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Sivansuthan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 1935px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.  Sujanitha</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD(SL)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 19405 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 1935px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. N. Suganthan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS, MD(Col) </td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 19748 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Physiotherapist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 1935px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Miss.P. Sivagowry</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+PHYSIOTHERAPIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="PlasticSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 1935px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Vipula Perera</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+PLASTIC SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Psychiatrist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2150px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Sivayogan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MD(PSY) </td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PSYCHIATRIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Rheumatologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 2150px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Narani Aravinthan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+RHEUMATOLOGIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 2150px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Rajendra</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 15443 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 2150px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Raviraj</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS  SURGERY</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 8761 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2365px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.M. Sivakumar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS,MS,FRCS(ENG)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT SURGEO</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 8909 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 2365px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. S. Gobishankar</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT GENERAL SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 21067 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 2365px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.V. Sutharsan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(COL)</td>
+</tr>
+
+<tr>
+<td align="center">
+PG CERT IN MEDICAL EDUCATION</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18718 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Surgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 2365px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.S. Giritharan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS, MD(SURGERY)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 18187 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Urologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2580px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.B. Sathesan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(JAF)</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT UROLOGICAL SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 15769 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician(NEO) border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 2580px, 0px);">
+<div class="gallery-thumb">
+  <h5 style="color:#2B96CC !important;" align="center" class="col-lg-11"> Dr.N. saravanapavan</h5>
+  <table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS, MD(PAED)</td>
+</tr>
+
+<tr>
+<td align="center"> CONSULTAN PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ SLMC NO: 15773 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Pediatrician(NEO) border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 2580px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Iranthi fernando</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CONSULTANT PAEDIATRICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Speech&amp;Language border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 2580px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Mr.Gowritharan</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+SPEECH &amp; LANGUAGE</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="ChestPhysician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 2795px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. B . Samarasekara</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+CHEST PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="ChestPhysician border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(275px, 2795px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr.Sumedha Samankantha</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center"> MBBS,MD,MRCP(UK)</td>
+</tr>
+
+<tr>
+<td align="center">
+CHEST PHYSICIAN</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="Nephrologist border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(550px, 2795px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. R . Weerakkody</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+NEPHOLODIST</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<article class="CancerSurgeon border_article isotope-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(825px, 2795px, 0px);">
+<div class="gallery-thumb">
+<h5 style="color:#2B96CC !important;" align="center">
+Dr. Aravinda Dissanayake</h5>
+<table cellpadding="4" cellspacing="2" align="center" style="font-weight:600;">
+<tbody><tr>
+<td align="center">
+MBBS(SL), MD (SL) </td>
+</tr>
+
+<tr>
+<td align="center">
+CANCER SURGEON</td>
+</tr>
+
+<tr>
+<td align="center">
+ 
+</td>
+</tr>
+</tbody></table>                    
+</div>
+</article>
+<!--<article class="entry laboratory">
+                      <div class="gallery-thumb">
+                      	<a href="gallery_images.php"><span class="overlay"></span></a>
+                        
+                       	<a href="gallery_images.php"><img src="images/gallery-img2.jpg" alt=""></a>
+                        </div>
+                        <p><a href="gallery_images.php">Event Name 2</a></p>
+                      </article>-->       
+    </div>
+    </section>
+    <div style="margin-top:24px; float:right; padding-bottom:10px;">
+<span class="st_facebook_large" displaytext="Facebook" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"></span></span>
+<span class="st_twitter_large" displaytext="Tweet" st_processed="yes"></span>
+<span class="st_googleplus_large" displaytext="Google +" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"></span></span>
+<span class="st_linkedin_large" displaytext="LinkedIn" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"></span></span>
+<span class="st_sharethis_large" displaytext="ShareThis" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"></span></span>
+</div>
+
+<script type="text/javascript" src="Consultant _ Northern Central Hospital_files/p.js.download" async=""></script><script type="text/javascript" id="async-buttons" src="Consultant _ Northern Central Hospital_files/async-buttons.js.download"></script><script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="Consultant _ Northern Central Hospital_files/buttons.js.download"></script>
+<script type="text/javascript">stLight.options({publisher: "44ca6000-9003-4e3b-ace2-d7fb5f783b8f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>  
+    <br>
+    </div>   
+    
+<div class="colourfull-row"></div>
+   
+</div><!--end #wrapper-->
+ 
+<script src="Consultant _ Northern Central Hospital_files/jquery-revolution.js.download"></script>
+    
+    
+    <script src="Consultant _ Northern Central Hospital_files/jquery.stellar.js.download"></script>
+    <script src="Consultant _ Northern Central Hospital_files/jquery-ui-1.10.3.custom.js.download"></script>
+    <script src="Consultant _ Northern Central Hospital_files/jquery.uniform.js.download"></script>
+    <!--Nimble-->
+    <script type="text/javascript" src="Consultant _ Northern Central Hospital_files/jquery.isotope.min.js.download"></script>
+    <script type="text/javascript" src="Consultant _ Northern Central Hospital_files/jquery.prettyPhoto.js.download"></script>
+    <!--jCarousel library-->
+	<script type="text/javascript" src="Consultant _ Northern Central Hospital_files/jquery.jcarousel.min.js.download"></script>
+    <script src="Consultant _ Northern Central Hospital_files/color-switcher.js.download"></script>
+    
+    <script>
+	//Portfolio
+		var $container = $('.portfolio');
+		$container.isotope({
+			filter: '*',
+			animationOptions: {
+				duration: 750,
+				easing: 'linear',
+				queue: false,
+			}
+		});
+	
+		$('nav.primary ul a').click(function(){
+			var selector = $(this).attr('data-filter');
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false,
+				}
+			});
+		  return false;
+		});
+	
+		var $optionSets = $('nav.primary ul'),
+			   $optionLinks = $optionSets.find('a');
+		 
+			   $optionLinks.click(function(){
+				  var $this = $(this);
+			  // don't proceed if already selected
+			  if ( $this.hasClass('selected') ) {
+				  return false;
+			  }
+		   var $optionSet = $this.parents('nav.primary ul');
+		   $optionSet.find('.selected').removeClass('selected');
+		   $this.addClass('selected'); 
+		});
+		
+		//preetyphotoeffect
+		jQuery(document).ready(function(){
+			jQuery('a[data-gal]').each(function() {
+				jQuery(this).attr('rel', jQuery(this).data('gal'));
+			});  	
+			jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_square',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
+			
+			//on click show content
+			jQuery('.link-more').click(function(e) {
+                jQuery('.content-sec').slideDown(1000);
+            });
+			//on click hide content
+			jQuery('.cross').click(function(e) {
+                jQuery('.content-sec').slideUp(1000);
+            });
+		}); 
+		
+		
+		
+	</script>   
+    
+
+<div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div><div id="stwrapper" class="stwrapper stwrapper5x" style="display: none;"><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="Consultant _ Northern Central Hospital_files/index.da1ddbea2047d4bf235dd7eb2282e4a4.html"></iframe></div><div id="stOverlay" onclick="javascript:stWidget.closeWidget();"></div></body></html>
